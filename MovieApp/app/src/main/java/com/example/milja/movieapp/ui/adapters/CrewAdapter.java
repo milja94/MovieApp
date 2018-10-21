@@ -50,6 +50,9 @@ public class CrewAdapter extends RecyclerView.Adapter<CrewAdapter.ViewHolder> {
             holder.nameTextView.setText(results.getTitle());
             if (results.getPosterPath() != null)
                 holder.crewSketchImageView.displayImage(Constants.IMAGE_URL + results.getPosterPath());
+            else{
+                //staviti neku defoultnu sliku
+            }
         }
     }
 

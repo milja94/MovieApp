@@ -94,7 +94,7 @@ public class MovieDetailsFragment extends BaseFragment {
         addToFavouritesButton.setOnClickListener(addToFavouritesListener);
         titleTextView = view.findViewById(R.id.movie_details_title_text_view);
         overviewTextView = view.findViewById(R.id.movie_details_description_text_view);
-        overviewTextView = view.findViewById(R.id.movie_details_description_text_view);
+        posterImageView = view.findViewById(R.id.movie_details_poster_image_view);
         genreTextVIew = view.findViewById(R.id.movie_details_genre_text_view);
         RecyclerView crewRecyclerView = view.findViewById(R.id.crew_recycler_view);
         crewRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
@@ -154,10 +154,10 @@ public class MovieDetailsFragment extends BaseFragment {
         titleTextView.setText(body.getTitle());
         overviewTextView.setText(body.getOverview());
         posterImageView.displayImage(Constants.IMAGE_URL + body.getPosterPath());
-        for (int i = 0; i < body.getGenresRealmList().size(); i++) {
-            genres.append(" ").append(body.getGenresRealmList().get(i));
-        }
-        genreTextVIew.setText(genres.toString());
+//        for (int i = 0; i < body.getGenresRealmList().size(); i++) {
+//            genres.append(" ").append(body.getGenresRealmList().get(i));
+//        }
+//        genreTextVIew.setText(genres.toString());
     }
 
     private void getRecommendations() {
